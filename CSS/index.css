@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-style: 'caveat';
+    background-image:url(../IMAGES/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.navbar {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right:30px;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:bolder;
+    color: yellow;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.navbar li a:hover, 
+.navbar li a.active {
+    color:mistyrose;
+} 
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height:2px;
+    background:orange;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.slider-frame {
+    overflow: hidden;
+    height: 500px;
+    width: 900px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+@-webkit-keyframes slide_animation {
+    0%{left:0px;}
+    10%{left:0px;}
+    20%{left:1200px;}
+    30%{left:1200px;}
+    40%{left:2400px;}
+    50%{left:2400px;}
+    60%{left:1200px;}
+    70%{left:1200px;}
+    80%{left:0px;}
+    90%{left:0px;}
+    100%{left:0px;}
+}
+
+.slide-images {
+    width: 4000px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name:slide_animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container {
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+
+h3{
+    color: gainsboro;
+    text-align: center;
+    justify-content: center;
+}
+
+h4 {
+    color:cornsilk;
+    text-align: center;
+}
+
+h5 {
+    color: mistyrose;
+    font-style: italic;
+    text-align:right;
+    text-decoration:overline;
+}
+
+section-p1 {
+    padding:40px 80px ;
+}
+
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 70px rgba(243, 239, 4, 0.1);
+}
+
+#feature .fe-box img {
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:black;
+    background-color: mistyrose;
+    font-weight: bold;
+}
+
+#feature .fe-box:nth-child(2) h6 {
+    background-color: lightblue;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color:deeppink;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color:greenyellow;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color:khaki;
+}
+
+#feature .fe-box:nth-child(6) h6 {
+    background-color:peru;
+}
+
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    padding: 0 40px;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro {
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid gainsboro;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.02ms ease;
+    position: relative;
+}
+
+#product1 .pro .img1 {
+    width: 60%;
+    border-radius: 20px;
+}
+
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color:skyblue;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: black;
+    font-size: 14px;
+}
+
+#product1 .pro .des .star {
+    color: gold;
+}
+
+#product1 .pro .des i {
+    font-size: 10px;
+}
+
+#product1 .pro .des h4 {
+    padding: 7px;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    color:darkseagreen;
+}
+
+footer {
+    color: gainsboro;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1200px;
+   
+    margin: auto;
+}
+
+.footer {
+    background-image: linear-gradient(150deg, black, rgb(218, 218, 57));
+    padding: 50px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color:greenyellow;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: darkseagreen;
+    text-decoration: none;
+    font-weight: 300;
+    color: magenta;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(42, 24, 207);
+    padding-left: 20px;
+}
+
+.footer-col .social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(228, 147, 48);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    color: lawngreen;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links:hover {
+    color: red;
+    background-color: white;
+}
+
+@media(max-width:767px) {
+    .footer-col {
+        width: 50px;
+        margin-bottom: 30px;
+
+    }
+}
+
+@media(max-width:540px) {
+    .footer-col {
+        width: 100px;    
+    }
+}
+

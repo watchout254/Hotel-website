@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-style: 'caveat';
+    background-image:url(../IMAGES/ziii.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.navbar {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right:30px;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:bolder;
+    color: yellow;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.navbar li a:hover, 
+.navbar li a.active {
+    color:mistyrose;
+} 
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height:2px;
+    background:orange;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.container h2, p, label {
+    color: black;
+    font-weight: bolder;
+}
